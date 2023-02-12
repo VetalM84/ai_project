@@ -19,6 +19,9 @@ img_filter = cv2.bilateralFilter(img_gray, 9, 15, 15)
 
 edges = cv2.Canny(img_filter, 30, 200)
 
+plt.imshow(cv2.cvtColor(edges, cv2.COLOR_BGR2RGB))
+pl.show()
+
 contours = cv2.findContours(edges.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 contours = imutils.grab_contours(contours)
 contours = sorted(contours, key=cv2.contourArea, reverse=True)
@@ -34,6 +37,9 @@ print(location)
 mask = np.zeros(img_gray.shape, np.uint8)
 new_image = cv2.drawContours(mask, [location], 0, 255, -1)
 bitwise_image = cv2.bitwise_and(img, img, mask=mask)
+
+plt.imshow(cv2.cvtColor(bitwise_image, cv2.COLOR_BGR2RGB))
+pl.show()
 
 (x, y) = np.where(mask == 255)
 (x1, y1) = (np.min(x), np.min(y))
