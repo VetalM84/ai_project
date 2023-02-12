@@ -1,7 +1,7 @@
 import cv2
 
 # load the faces model
-faces = cv2.CascadeClassifier('faces.xml')
+faces = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # read the image
 img = cv2.imread('media/people.jpg')
 # resize the image
