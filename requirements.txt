@@ -4,3 +4,4 @@ opencv-python==4.5.4.60
 easyocr==1.6.2
 matplotlib==3.6.3
 imageai~=3.0.3
+pixellib~=0.7.1
