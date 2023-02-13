@@ -1,4 +1,4 @@
-"""Detect objects using ImageAI and pyTorch."""
+"""Detect objects on the images using ImageAI and pyTorch."""
 
 from imageai.Detection import ObjectDetection
 
