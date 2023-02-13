@@ -1,3 +1,5 @@
+"""Detect car plates on images using OpenCV and pretrained model."""
+
 import cv2
 
 

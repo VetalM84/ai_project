@@ -1,3 +1,7 @@
+"""Detect car plates on images using OpenCV and pretrained model.
+Recognize the plate's number using EasyOCR."""
+
+
 import cv2
 import easyocr
 

@@ -1,3 +1,6 @@
+"""Detect car plates on images using OpenCV by contours.
+Recognize the plate's number using EasyOCR."""
+
 import cv2
 import pylab as pl
 from matplotlib import pyplot as plt

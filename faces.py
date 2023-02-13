@@ -1,4 +1,7 @@
+"""Detect faces on images using OpenCV and pretrained model."""
+
 import cv2
+
 
 # load the faces model
 faces = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')

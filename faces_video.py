@@ -1,8 +1,10 @@
+"""Detect faces on videos and webcam using OpenCV and pretrained model."""
+
 import cv2
 
 
 # load the faces model
-faces = cv2.CascadeClassifier('faces.xml')
+faces = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # use webcam
 cap = cv2.VideoCapture(0)
 # To use a video file as input
