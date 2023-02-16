@@ -1,4 +1,5 @@
 """Face recognition from webcam using face_recognition package."""
+
 import os
 import pickle
 
@@ -16,17 +17,14 @@ def get_face_encodings(images_path, name):
 
         if len(encodings) == 0:
             encodings.append(face_id)
+        # check whether face is attended to same person
+        elif all(fr.compare_faces(encodings, face_id)):
+            encodings.append(face_id)
         else:
-            # check whether face is attended to same person
-            for item in range(0, len(encodings)):
-                result = fr.compare_faces([face_id], encodings[item])
-                if result[0]:
-                    encodings.append(face_id)
-                    print("Same person!")
-                    break
-                else:
-                    print("Another person!")
-                    break
+            continue
+
+    print(len(encodings), "face(s) added")
+
     data = {
         "name": name,
         "encodings": encodings,
